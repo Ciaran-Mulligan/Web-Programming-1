@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+
+<p> Summary: {{summary()}}</p>
+
+<p *ngFor="let item of colours; let odd=odd; let even=even; let i = index;"
+[ngClass]="{ oddrow: odd, evenrow:even}">({{i}}) {{item}}
+</p>
+
+<p *ngIf="coloursUsed.length === 0">
+  No Colours Used
+</p>
